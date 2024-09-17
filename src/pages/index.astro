@@ -2,12 +2,13 @@
 import CursorTag from "../components/CursorTag"
 import Header from "../components/Header.astro"
 import BasicsLayout from "../layouts/BasicsLayout.astro"
+
 ---
 
 
 <BasicsLayout title="La Piscine">
 	<Header/>
-	<section class="w-screen flex justify-center my-32">
+	<section class="w-full flex justify-center my-32">
 		<!-- <div class="flex justify-center w-full"> -->
 			<div class="max-w-[1440px] flex justify-between gap-20">
 				<div class="relative">
@@ -19,6 +20,8 @@ import BasicsLayout from "../layouts/BasicsLayout.astro"
 					<img src="/main_badge.svg" alt="Badge avec logo clash of dev" class="absolute -right-3 top-2"/>
 				</div>
 			</div>
-		<!-- </div> -->
+			<!-- </div> -->
 	</section>
+
+	<CursorTag href="/" tag="@smetimecrea" direction="right" color="blue" />
 </BasicsLayout>
