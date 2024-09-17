@@ -1,27 +1,34 @@
 ---
-import CursorTag from "../components/CursorTag"
 import Header from "../components/Header.astro"
 import BasicsLayout from "../layouts/BasicsLayout.astro"
-
+import ScrollProgress from "../components/ScrollProgress"
+import CardLayout from "../layouts/CardLayout.astro"
+import CursorTag from "../components/CursorTag"
 ---
 
 
 <BasicsLayout title="La Piscine">
+	<ScrollProgress client:load/>
 	<Header/>
-	<section class="w-full flex justify-center my-32">
-		<!-- <div class="flex justify-center w-full"> -->
-			<div class="max-w-[1440px] flex justify-between gap-20">
-				<div class="relative">
-					<h2 class="text-center text-[112px] leading-none font-semibold">Que le plus fort,<br/><span class="italic">l'emporte!</span></h2>
-					<img src="/secondary_badge.svg" alt="Badge code et éclair" class="absolute bottom-36"/>
-				</div>
-				<div class="relative">
-					<img src="/card.svg" alt="Image d'une carte"/>
-					<img src="/main_badge.svg" alt="Badge avec logo clash of dev" class="absolute -right-3 top-2"/>
-				</div>
+	<section class="w-full flex flex-col items-center justify-center my-32">
+		<div class="max-w-[1440px] flex justify-between gap-20 ">
+			<div class="relative">
+				<h2 class="text-center text-[112px] leading-none font-semibold">Que le plus fort,<br/><span class="italic">l'emporte!</span></h2>
+				<img src="/svg/secondary_badge.svg" alt="Badge code et éclair" class="absolute bottom-36"/>
 			</div>
-			<!-- </div> -->
+			<div class="relative">
+				<img src="/svg/card.svg" alt="Image d'une carte"/>
+				<img src="/svg/main_badge.svg" alt="Badge avec logo clash of dev" class="absolute -right-3 top-2"/>
+			</div>
+		</div>
+		<div class="w-full max-w-[1440px]">
+			<h2 class="text-left font-bold text-[225px] text-nowrap overflow-hidden">&lt;A&gt;Front les Tous !</h2>
+		</div>
 	</section>
+	<CardLayout>
+		<CursorTag tag="ugo" color="green" direction="right" href="/"/>
+		
+	</CardLayout>
 
-	<CursorTag href="/" tag="@smetimecrea" direction="right" color="blue" />
+
 </BasicsLayout>

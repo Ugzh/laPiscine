@@ -67,16 +67,19 @@ const CursorTag: FC<CursorTagProps> = ({ href, tag, direction, color }) => {
       ? `absolute -left-4 ${cursorColor} -top-5 rotate-[-10deg] drop-shadow`
       : `absolute -right-4 ${cursorColor} rotate-[60deg] -top-5 drop-shadow`;
   return href ? (
-    <div>
+    <>
       <a href={href} className={`${tagStyle} relative`}>
         {tag}
         <Cursor className={cursorDirection} />
       </a>
-    </div>
+    </>
   ) : (
-    <div>
-      <span className={tagStyle}>{tag}</span>
-    </div>
+    <>
+      <span className={`${tagStyle} relative`}>
+        {tag}
+        <Cursor className={cursorDirection} />
+      </span>
+    </>
   );
 };
 
