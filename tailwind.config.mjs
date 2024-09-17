@@ -9,6 +9,10 @@ export default {
 				sans: ['Inter',...defaultTheme.fontFamily.sans]
 			}
 		},
+		colors:{
+			black:'#262625',
+			white:'#F3F3F1', 
+		},
 	},
 	plugins: [],
 }

@@ -1,8 +1,24 @@
 ---
+import CursorTag from "../components/CursorTag"
 import Header from "../components/Header.astro"
 import BasicsLayout from "../layouts/BasicsLayout.astro"
 ---
+
+
 <BasicsLayout title="La Piscine">
 	<Header/>
-	<h1>Astro</h1>
+	<section class="w-screen flex justify-center my-32">
+		<!-- <div class="flex justify-center w-full"> -->
+			<div class="max-w-[1440px] flex justify-between gap-20">
+				<div class="relative">
+					<h2 class="text-center text-[112px] leading-none font-semibold">Que le plus fort,<br/><span class="italic">l'emporte!</span></h2>
+					<img src="/secondary_badge.svg" alt="Badge code et éclair" class="absolute bottom-36"/>
+				</div>
+				<div class="relative">
+					<img src="/card.svg" alt="Image d'une carte"/>
+					<img src="/main_badge.svg" alt="Badge avec logo clash of dev" class="absolute -right-3 top-2"/>
+				</div>
+			</div>
+		<!-- </div> -->
+	</section>
 </BasicsLayout>
