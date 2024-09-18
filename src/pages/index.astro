@@ -15,21 +15,27 @@ import pointerSvg from "../../public/svg/pointer.svg?raw"
 	}
 
 	.svg_tracker svg {
+		z-index: -1;
 		position: absolute;
 		bottom: -100px;
 		right: -80px;
-		@media screen and (max-width:1024px) {
-			width: 200px;
-			bottom: -160px;
-			right: -40px;
 		
-		}
-		@media screen and (max-width:1280px) and (min-width:1024px){
-			bottom: -150px;
-			right: -50px;
-			width: 300px;
-		}
 	}
+	@media screen and (max-width:1024px) {
+			.svg_tracker svg {
+				width: 200px;
+				bottom: -160px;
+				right: -40px;
+			}
+		}
+
+	@media screen and (max-width:1280px) and (min-width:1024px){
+			.svg_tracker svg {
+				bottom: -150px;
+				right: -50px;
+				width: 300px;
+			}
+		}
 </style>
 
 <BasicsLayout title="La Piscine" >
@@ -53,7 +59,7 @@ import pointerSvg from "../../public/svg/pointer.svg?raw"
 	<section class="w-full flex justify-center">
 		<div class="max-w-[1440px] px-8 flex w-full">
 			<CardLayout color="purple" title="l'artiste de renom" imgUrl="/img/painter.png" imgAlt="Imagé en pixel d'un peintre">
-				<CursorTag color="purple" href="/" tag="ugo" slot="tag"/>
+				<CursorTag color="purple" href="/" tag="@maislina_" slot="tag"/>
 				<CursorTag color="purple" href="/" tag="ugo" slot="tag"/>
 				<Fragment slot="description">
 					<p><strong>Le design</strong>, c’est son terrain de jeu.Il maîtrise et retranscrit correctement chaque pixel de la maquette.</p>

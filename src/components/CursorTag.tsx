@@ -18,8 +18,8 @@ const CursorTag: FC<CursorTagProps> = ({ href, tag, direction, color }) => {
   const tagDirection =
     direction === "right" ? "rounded-l-full" : "rounded-r-full";
 
-  const tagStyle = `${bgColor} text-[#F3F3F3] inline-block px-4 py-1 rounded-b-full
-  border-2 ${tagDirection} ${borderColor} font-semibold text-xs`;
+  const tagStyle = `${bgColor} text-[#F3F3F3] inline-block px-2 py-1 rounded-b-full
+  border-2 ${tagDirection} ${borderColor} font-semibold text-xs `;
 
   const cursorDirection =
     direction === "right"

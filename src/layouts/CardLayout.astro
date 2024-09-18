@@ -13,16 +13,16 @@ const {title, imgUrl, imgAlt, color} = Astro.props
 
 const bgColor = colorExist(COLOR_CARDS,color)?.bg
 ---
-<div class=`w-full ${bgColor} relative overflow-hidden rounded-[60px]`>
-    <div class="flex justify-between items-center mt-5">
-        <h3 class="font-bold text-xs ml-64">{title.toLocaleUpperCase()}</h3>
-        <div class="space-x-8 mr-20 mt-9">
+<div class=`w-full ${bgColor} relative overflow-hidden rounded-[60px] z-[-2]`>
+    <div class="flex justify-between items-center mt-5 ">
+        <h3 class="font-bold text-xs lg:ml-64 sm:ml-52 ml-24">{title.toLocaleUpperCase()}</h3>
+        <div class="space-x-8 mr-0 sm:mr-20 sm:mt-9 mt-0 flex items-end flex-col sm:flex-row md:gap-0 gap-5 translate-y-16 sm:translate-y-10">
             <slot name="tag"/>
         </div>
     </div>
     <div class="flex sm:p-10 p-4 lg:flex-row flex-col gap-6 lg:gap-0 md:gap-4">
-        <img src={imgUrl} alt={imgAlt} class=" sm:object-cover object-contain inline-block  sm:h-[30vh] z-10 xl:w-full lg:w-4/5 md:h-3/5 rounded-[20px]"/>
-        <div class="flex flex-col gap-8 text-xs  px-5 mr-12 w-full text-[#262625]/60 description_card lg:pb-0 lg:pt-9 pb-28">
+        <img src={imgUrl} alt={imgAlt} class=" sm:object-cover object-contain inline-block sm:h-[30vh] xl:w-full lg:w-4/5 md:h-3/5 rounded-[20px]"/>
+        <div class="flex flex-col gap-8 text-xs px-5 w-full text-[#262625]/60 description_card lg:pb-0 lg:pt-7 md:pb-20 pb-24">
             <slot name="description"/>
         </div>
     </div>
