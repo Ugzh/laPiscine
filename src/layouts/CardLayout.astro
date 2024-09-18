@@ -1,17 +1,34 @@
 ---
-const {title} = Astro.props
-const {description} = Astro.props
-const {imgUrl} = Astro.props
-const {imgAlt} = Astro.props
-const {svgUrl} = Astro.props
-const {svgAlt} = Astro.props
-const {color} = Astro.props
+import { colorExist, COLOR_CARDS } from "../utils/colorUtils"
+import type { Color } from "../utils/colorUtils";
+
+interface Props {
+    title: string;
+    imgUrl: string;
+    imgAlt: string;
+    color: Color;
+    
+}
+const {title, imgUrl, imgAlt, color} = Astro.props
+
+const bgColor = colorExist(COLOR_CARDS,color)?.bg
 
 ---
 
-<div>
-    <h3>{title}</h3>
-    <img src={imgUrl} alt={imgAlt}/>
-    <p>{description}</p>
-    <slot/>
+<div class=`w-full ${bgColor} relative overflow-hidden rounded-[60px]`>
+    <div class="flex justify-between items-center mt-8">
+        <h3 class="font-bold text-xs ml-64">{title.toLocaleUpperCase()}</h3>
+        <div class="space-x-8 mr-20">
+            <slot name="tag"/>
+        </div>
+    </div>
+    <div class="flex p-10 ">
+        <img src={imgUrl} alt={imgAlt}/>
+        <div class="flex flex-col gap-8 text-xs pt-9 px-5 max-w-60 mr-12 w-full text-[#262625]/60">
+            <slot name="description"/>
+        </div>
+    </div>
+    <div class="absolute -bottom-28 -right-20">
+        <slot name="svg"/>
+    </div>
 </div>
