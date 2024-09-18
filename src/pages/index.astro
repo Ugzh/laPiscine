@@ -4,15 +4,38 @@ import BasicsLayout from "../layouts/BasicsLayout.astro"
 import ScrollProgress from "../components/ScrollProgress"
 import CardLayout from "../layouts/CardLayout.astro"
 import CursorTag from "../components/CursorTag"
-
 import pointerSvg from "../../public/svg/pointer.svg?raw"
 ---
+<style is:global>
+	.description_card p {
+		max-width: 240px;
+		@media screen and (max-width:1024px) {
+			max-width: 100%;
+		}
+	}
 
+	.svg_tracker svg {
+		position: absolute;
+		bottom: -100px;
+		right: -80px;
+		@media screen and (max-width:1024px) {
+			width: 200px;
+			bottom: -160px;
+			right: -40px;
+		
+		}
+		@media screen and (max-width:1280px) and (min-width:1024px){
+			bottom: -150px;
+			right: -50px;
+			width: 300px;
+		}
+	}
+</style>
 
-<BasicsLayout title="La Piscine">
+<BasicsLayout title="La Piscine" >
 	<ScrollProgress client:load/>
 	<Header/>
-	<section class="w-full flex flex-col items-center justify-center my-32">
+	<!-- <section class="w-full flex flex-col items-center justify-center my-32">
 		<div class="max-w-[1440px] flex justify-between gap-20 ">
 			<div class="relative">
 				<h2 class="text-center text-[112px] leading-none font-semibold">Que le plus fort,<br/><span class="italic">l'emporte!</span></h2>
@@ -26,18 +49,18 @@ import pointerSvg from "../../public/svg/pointer.svg?raw"
 		<div class="w-full max-w-[1440px]">
 			<h2 class="text-left font-bold text-[225px] text-nowrap overflow-hidden">&lt;A&gt;Front les Tous !</h2>
 		</div>
-	</section>
+	</section> -->
 	<section class="w-full flex justify-center">
-		<div class="max-w-[1440px]">
-		<CardLayout color="purple" title="l'artiste de renom" imgUrl="/img/painter.png" imgAlt="Imagé en pixel d'un peintre">
-			<CursorTag color="purple" href="/" tag="ugo" slot="tag" direction="right"/>
-			<CursorTag color="purple" href="/" tag="ugo" slot="tag"/>
-			<Fragment slot="description">
-				<p><strong>Le design</strong>, c’est son terrain de jeu. Il maîtrise et retranscrit correctement chaque pixel de la maquette.</p>
-				<p>Virtuose des couleurs il ne se trompe jamais de code HEX, de spacing ou de border-radius ; Figma n’a aucun secret pour ce Dev de talent.</p>
-			</Fragment>
-			<Fragment set:html={pointerSvg} slot="svg"/>
-		</CardLayout>
+		<div class="max-w-[1440px] px-8 flex w-full">
+			<CardLayout color="purple" title="l'artiste de renom" imgUrl="/img/painter.png" imgAlt="Imagé en pixel d'un peintre">
+				<CursorTag color="purple" href="/" tag="ugo" slot="tag"/>
+				<CursorTag color="purple" href="/" tag="ugo" slot="tag"/>
+				<Fragment slot="description">
+					<p><strong>Le design</strong>, c’est son terrain de jeu.Il maîtrise et retranscrit correctement chaque pixel de la maquette.</p>
+					<p>Virtuose des couleurs il ne se trompe jamais de code HEX, de spacing ou de border-radius ; <strong >Figma n’a aucun secret pour ce Dev de talent.</strong></p>
+				</Fragment>
+				<Fragment set:html={pointerSvg} slot="svg" />
+			</CardLayout>
 		</div>
 	</section>
 	<br/>
