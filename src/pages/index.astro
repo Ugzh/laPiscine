@@ -5,6 +5,7 @@ import ScrollProgress from "../components/ScrollProgress"
 import CardLayout from "../layouts/CardLayout.astro"
 import CursorTag from "../components/CursorTag"
 import pointerSvg from "../../public/svg/pointer.svg?raw"
+import snippetSvg from "../../public/svg/snippet.svg?raw"
 ---
 <style is:global>
 	.description_card p {
@@ -15,7 +16,6 @@ import pointerSvg from "../../public/svg/pointer.svg?raw"
 	}
 
 	.svg_tracker svg {
-		z-index: -1;
 		position: absolute;
 		bottom: -100px;
 		right: -80px;
@@ -57,23 +57,29 @@ import pointerSvg from "../../public/svg/pointer.svg?raw"
 		</div>
 	</section> -->
 	<section class="w-full flex justify-center">
-		<div class="max-w-[1440px] px-8 flex w-full">
+		<div class="max-w-[1440px] px-8 flex w-full flex-col">
 			<CardLayout color="purple" title="l'artiste de renom" imgUrl="/img/painter.png" imgAlt="Imagé en pixel d'un peintre">
-				<CursorTag color="purple" href="/" tag="@maislina_" slot="tag"/>
-				<CursorTag color="purple" href="/" tag="ugo" slot="tag"/>
+				<CursorTag color="purple" href="/" tag="@chris" slot="tag"/>
+				<CursorTag color="purple" href="/" tag="@lina" slot="tag"/>
 				<Fragment slot="description">
 					<p><strong>Le design</strong>, c’est son terrain de jeu.Il maîtrise et retranscrit correctement chaque pixel de la maquette.</p>
 					<p>Virtuose des couleurs il ne se trompe jamais de code HEX, de spacing ou de border-radius ; <strong >Figma n’a aucun secret pour ce Dev de talent.</strong></p>
 				</Fragment>
 				<Fragment set:html={pointerSvg} slot="svg" />
 			</CardLayout>
+	
+			<!-- <CardLayout color="pink" title="le bâtisseur de code" imgUrl="/img/builder.png" imgAlt="Imagé en pixel d'un peintre">
+				<CursorTag color="pink" href="/" tag="@maislina_" slot="tag"/>
+				<CursorTag color="pink" href="/x.com/zied" tag="zied" slot="tag"/>
+				<Fragment slot="description">
+					<p>Ses lignes de code sont des fondations solides. C’est un maître du front, capable de structurer les systèmes les plus complexes sans se casser la tête.</p>
+					<p>Maitre de VSCode, il a surement fini le challenge en s’assurant d’avoir le code le plus clair et le plus propre des 36 participants.</p>
+				</Fragment>
+				<Fragment set:html={snippetSvg} slot="svg" />
+			</CardLayout>
+	 -->
 		</div>
 	</section>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<br/>
+
 
 </BasicsLayout>
