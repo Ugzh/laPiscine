@@ -1,0 +1,23 @@
+<script >
+    const test = () => {
+    console.log("hello")
+    }
+
+    const testButton = document.querySelector('#test')
+
+    testButton?.addEventListener('click',()=>{
+        handleDarkMode()
+    })
+
+	const handleDarkMode = ()=>{
+        const body = document?.querySelector('body')
+        console.log('pass')
+        body?.classList.toggle('dark')
+        
+}   
+handleDarkMode()
+</script>
+
+<div>
+    <button id="test">Hi</button>
+</div>

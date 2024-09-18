@@ -6,7 +6,12 @@ import CardLayout from "../layouts/CardLayout.astro"
 import CursorTag from "../components/CursorTag"
 import pointerSvg from "../../public/svg/pointer.svg?raw"
 import snippetSvg from "../../public/svg/snippet.svg?raw"
+import DarkMode from "../components/DarkMode.astro"
+
+
 ---
+
+
 <style is:global>
 	.description_card p {
 		max-width: 240px;
@@ -41,8 +46,8 @@ import snippetSvg from "../../public/svg/snippet.svg?raw"
 <BasicsLayout title="La Piscine" >
 	<ScrollProgress client:load/>
 	<Header/>
-	<section class="w-full flex flex-col items-center justify-center my-32">
-		<div class="max-w-[1440px] flex justify-between gap-20 ">
+	<section class="w-full flex flex-col items-center justify-center my-32 ">
+		<div class="max-w-[1440px] flex justify-between gap-20">
 			<div class="relative">
 				<h2 class="text-center text-[112px] leading-none font-semibold">Que le plus fort,<br/><span class="italic">l'emporte!</span></h2>
 				<img src="/svg/secondary_badge.svg" alt="Badge code et éclair" class="absolute bottom-36"/>
@@ -56,7 +61,7 @@ import snippetSvg from "../../public/svg/snippet.svg?raw"
 			<h2 class="text-left font-bold text-[225px] text-nowrap overflow-hidden">&lt;A&gt;Front les Tous !</h2>
 		</div>
 	</section>
-	<section class="w-full flex justify-center">
+	<section class="w-full flex justify-center ">
 		<div class="max-w-[1440px] px-8 flex w-full flex-col">
 			<CardLayout color="purple" title="l'artiste de renom" imgUrl="/img/painter.png" imgAlt="Imagé en pixel d'un peintre">
 				<CursorTag color="purple" href="/" tag="@chris" slot="tag"/>
@@ -67,7 +72,7 @@ import snippetSvg from "../../public/svg/snippet.svg?raw"
 				</Fragment>
 				<Fragment set:html={pointerSvg} slot="svg" />
 			</CardLayout>
-	
+			<DarkMode/>
 			<!-- <CardLayout color="pink" title="le bâtisseur de code" imgUrl="/img/builder.png" imgAlt="Imagé en pixel d'un peintre">
 				<CursorTag color="pink" href="/" tag="@maislina_" slot="tag"/>
 				<CursorTag color="pink" href="/x.com/zied" tag="zied" slot="tag"/>

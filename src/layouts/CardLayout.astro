@@ -15,7 +15,7 @@ const bgColor = colorExist(COLOR_CARDS,color)?.bg
 ---
 <div class=`w-full ${bgColor} relative overflow-hidden rounded-[60px] `>
     <div class="flex justify-between items-center mt-5 w-full flex-col sm:flex-row">
-        <h3 class="font-bold text-xs lg:ml-64 sm:ml-36 pb-4 pt-5 sm:py-0 sm:w-full ">{title.toLocaleUpperCase()}</h3>
+        <h3 class="font-bold text-xs lg:ml-64 sm:ml-36 pb-4 pt-5 sm:py-0 sm:w-full dark:text-[#262625]">{title.toLocaleUpperCase()}</h3>
         <div class="space-x-8 mr-0 -mt-10 sm:mr-20 sm:mt-9 flex items-end flex-col sm:flex-row md:gap-0 gap-5 translate-y-20 sm:translate-y-0 pr-5 sm:pr-0 w-full sm:justify-end">
             <slot name="tag"/>
         </div>
