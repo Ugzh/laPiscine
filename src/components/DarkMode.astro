@@ -1,23 +1,39 @@
+---
+import buttonSvg from "/svg/button.svg?raw"
+
+---
+
 <script >
-    const test = () => {
-    console.log("hello")
-    }
-
-    const testButton = document.querySelector('#test')
-
-    testButton?.addEventListener('click',()=>{
+    const darkButton = document.querySelector('#darkMode')
+    darkButton?.addEventListener('click',()=>{
         handleDarkMode()
     })
 
+    
+
 	const handleDarkMode = ()=>{
         const body = document?.querySelector('body')
-        console.log('pass')
+        const svgButton = document.querySelector('#darkMode > svg > path')
+
+        if(svgButton?.attributes[1].value === "#262625"){
+            svgButton.setAttribute('fill','#F3F3F1')
+        } else {
+            svgButton?.setAttribute('fill','#262625')
+        }
         body?.classList.toggle('dark')
         
-}   
-handleDarkMode()
+        darkButton?.classList.toggle('animate-darkButton')
+        darkButton?.classList.toggle('animate-lightButton')
+
+        
+    
+        
+}     
 </script>
 
-<div>
-    <button id="test">Hi</button>
-</div>
+
+<div class="bg-[#262625] dark:bg-[#F3F3F1] w-[60px] flex py-1 rounded-full px-1">
+    <button id="darkMode" class={` text-[#262625] bg-[#F3F3F1] dark:bg-[#262625] dark:text-[#F3F3F1] w-6 h-6 rounded-full pl-[3.5px] animate-lightButton`}>
+        <Fragment set:html={buttonSvg}/>
+    </button>
+</div> 
