@@ -28,14 +28,7 @@ const typedData: CardProps[] = DATA as CardProps[]
 ---
 
 
-<style is:global>
-	.description_card p {
-		max-width: 240px;
-		@media screen and (max-width:1024px) {
-			max-width: 100%;
-		}
-	}
-</style>
+
 
 <BasicsLayout title="La Piscine" >
 	<ScrollProgress client:load/>
@@ -74,7 +67,7 @@ const typedData: CardProps[] = DATA as CardProps[]
 				{tag.map(({name,href}: TagProps)=> <CursorTag slot="tag" href={href} tag={name} color={color}/> )}
 				<p slot="description" set:html={description}></p>
 				<p slot="description" set:html={subDescription}></p>
-				<img src={svgUrl} alt={`Icone du ${title}`} slot="svg" class="absolute -bottom-10 -right-8 w-40"/> 
+				<img src={svgUrl} alt={`Icone du ${title}`} slot="svg" class="absolute -bottom-10 -right-8 w-40 lg:w-80 lg:-right-20 lg:-bottom-24 xl:w-96 -z-10 md:w-60 md:-right-14 md:-bottom-20"/> 
 			</CardLayout>
 			})}
 		</div>
