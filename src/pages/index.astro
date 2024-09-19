@@ -2,7 +2,6 @@
 import Header from "../components/Header.astro"
 import BasicsLayout from "../layouts/BasicsLayout.astro"
 import ScrollProgress from "../components/ScrollProgress"
-import FormatDescription from "../components/FormatDescription"
 import CardLayout from "../layouts/CardLayout.astro"
 import CursorTag from "../components/CursorTag"
 import DATA from '../../data.json'
@@ -60,7 +59,7 @@ const typedData: CardProps[] = DATA as CardProps[]
 					<div class="absolute bottom-10 -left-6 lg:bottom-4 lg:-left-16 ">
 						<CursorTag tag="@sometimecrea" href="https://x.com/sometimecrea" color="pink" direction="right"/>
 					</div>
-					<img src="/svg/main_badge.svg" alt="Badge avec logo clash of dev" class="absolute right-2 top-4"/>
+					<img src="/svg/main_badge.svg" alt="Badge avec logo clash of dev" class="absolute right-0 top-2"/>
 				</div>
 			</div>
 		</div>
