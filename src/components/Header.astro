@@ -9,7 +9,7 @@ import { ScrollTracker } from "./ScrollTracker";
   window.addEventListener('scroll',()=>{
     const docHeight = document.documentElement.scrollHeight - window.innerHeight
     const scrollPercentage = Math.floor((scrollY/docHeight)*100)
-    return document.querySelector('#percentage').textContent =`${scrollPercentage}%`
+    return document.querySelector('#percentage')!.textContent =`${scrollPercentage}%`
   })
 </script>
 
