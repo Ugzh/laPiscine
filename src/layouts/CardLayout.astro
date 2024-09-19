@@ -2,11 +2,11 @@
 import { colorExist, COLOR_CARDS } from "../utils/colorUtils"
 import type { Color } from "../utils/colorUtils";
 
-export interface ColorProps {
+interface Props {
     title: string;
     imgUrl: string;
     imgAlt: string;
-    color: Color ;   
+    color: Color;   
 }
 
 const {title, imgUrl, imgAlt, color} = Astro.props

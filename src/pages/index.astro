@@ -26,10 +26,6 @@ interface CardProps {
 const typedData: CardProps[] = DATA as CardProps[]
 
 ---
-
-
-
-
 <BasicsLayout title="La Piscine" >
 	<ScrollProgress client:load/>
 	<Header/>
@@ -70,6 +66,17 @@ const typedData: CardProps[] = DATA as CardProps[]
 				<img src={svgUrl} alt={`Icone du ${title}`} slot="svg" class="absolute -bottom-10 -right-8 w-40 lg:w-80 lg:-right-20 lg:-bottom-24 xl:w-96 -z-10 md:w-60 md:-right-14 md:-bottom-20"/> 
 			</CardLayout>
 			})}
+			<div class=`w-full bg-[#262625] dark:bg-[#F3F3F1] relative overflow-hidden rounded-[60px] sticky top-0 flex items-center flex-col gap-28`>
+				<img src="/svg/smileyCard.svg" alt="smiley svg" class="absolute top-16 right-16 md:top-[350px] md:right-44"/>
+				<h2 class="text-[#F3F3F1] dark:text-[#262625] text-[40px] font-semibold max-w-72 text-justify mt-20 pt-20 sm:max-w-96 sm:text-5xl md:max-w-full md:text-center md:text-[5rem] md:px-9 md:[word-spacing:20px] lg:text-[6rem] xl:text-[7rem] lg:px-20">Click Me ?  Might enter the finals </h2>
+				<div class="flex justify-center pb-20">
+					<button type="submit" class="dark:text-[#F3F3F1] text-[#262625] bg-[#F3F3F1] dark:bg-[#262625] text-sm font-semibold px-8 py-4 rounded-full relative">Enter Next Level
+					<img src="/svg/flash.svg" alt="badge flash" class="absolute top-9 right-0 w-14"/>
+					<img src="/svg/stars.svg" alt="badge stars" class="absolute -top-5 -left-4 w-10 "/>
+					<img src="/svg/snippet.svg" alt="badge snippet" class="absolute -top-11 w-20 -right-8 -z-10 rotate-45"/>
+					</button>
+				</div>
+			</div>
 		</div>
 	</section>
 </BasicsLayout>
