@@ -47,22 +47,22 @@ import DarkMode from "../components/DarkMode.astro"
 	<ScrollProgress client:load/>
 	<Header/>
 	<section class="w-full flex flex-col items-center justify-center my-32">
-		<div class="max-w-[1440px] flex-col flex justify-between lg:flex-row lg:items-between gap-12 w-full">
-			<div class="w-full justify-center flex ">
-				<h2 class="sm:text-left md:text-left lg:text-center text-[4.6rem] xl:text-[7rem] md:text-[5.5rem] lg:text-[5.5rem] text-left px-3 leading-none font-semibold sm:max-w-sm md:max-w-md lg:max-w-3xl xl:max-w-4xl max-w-sm text-wrap relative">Que le plus fort, <span class="italic">l'emporte!</span>
-					<img src="/svg/secondary_badge.svg" alt="Badge code et éclair" class="absolute sm:right-8 sm:-top-1 md:right-12 md:top-2 lg:top-24 lg:left-12 xl:top-32 xl:left-8 -top-1 right-6"/>
+		<div class="max-w-[1440px] flex-col flex justify-between items-center lg:flex-row lg:items-between gap-12 w-full">
+			<div class="w-full justify-center lg:justify-start flex ">
+				<h2 class="sm:text-left md:text-left lg:text-center text-[4.4rem] xl:text-[7rem] md:text-[5.5rem] lg:text-[4.9rem] text-left px-3 leading-none font-semibold sm:max-w-sm md:max-w-md lg:max-w-[628px] xl:max-w-4xl max-w-sm text-wrap relative">Que le plus fort, <span class="italic">l'emporte!</span>
+					<img src="/svg/secondary_badge.svg" alt="Badge code et éclair" class="absolute sm:right-8 sm:-top-1 md:right-12 md:top-2 lg:top-20 lg:left-2 xl:top-32 xl:left-8 -top-1 right-6"/>
 				</h2>
 			</div>
 			<div class="flex justify-center">
-				<div class="relative">
-					<img src="/svg/card.svg" alt="Image d'une carte"/>
-					<div class="absolute right-0 bottom-2">
+				<div class="relative lg:mr-10 xl:m-0 ">
+					<img src="/svg/card.svg" alt="Image d'une carte" class="max-w-fit" />
+					<div class="absolute right-0 bottom-2 lg:-bottom-2 lg:-right-7">
 						<CursorTag tag="@LLCoolChris" href="https://x.com/LLCoolChris_" color="blue"/>
 					</div>
-					<div class="absolute -right-3 top-48">
+					<div class="absolute -right-3 top-48 lg:top-36 lg:-right-9">
 						<CursorTag tag="@maislina_" href="https://x.com/maislina_" color="orange"/>
 					</div>
-					<div class="absolute bottom-10 -left-10">
+					<div class="absolute bottom-10 -left-6 lg:bottom-4 lg:-left-16 ">
 						<CursorTag tag="@sometimecrea" href="https://x.com/sometimecrea" color="pink" direction="right"/>
 					</div>
 					<img src="/svg/main_badge.svg" alt="Badge avec logo clash of dev" class="absolute right-2 top-4"/>
