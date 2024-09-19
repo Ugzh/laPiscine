@@ -1,5 +1,4 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
-import plugin from 'tailwindcss'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -10,17 +9,6 @@ export default {
 				sans: ['Inter',...defaultTheme.fontFamily.sans]
 			},
 			keyframes:{
-				lightButton: {
-					'0%, 100%': { transform: 'rotate(-3deg)',
-					 },
-          			'50%': { transform: 'rotate(3deg)' },
-				},
-				darkButton:{
-					'0%, 100%': { transform: 'translateX(0) rotate(-10deg)',
-					 },
-          			'50%': { transform: 'translateX(0) rotate(15deg)' },
-					
-				},
 				darkToLightAnimmation : {
 					'0%': { transform: 'translateX(1.75rem)'
 					 },
@@ -31,12 +19,16 @@ export default {
 					 },
           			'100%': { transform: 'translateX(1.75rem)' },
 				},
+				scrollHorizontal:{
+					'0%': {  transform: 'translateX(20%)'
+					 },
+          			'100%': {  transform: 'translateX(-110%)' },
+				}
 			},
 			animation:{
-				none1 : 'lightButton 2s ease-in-out infinite',
-				none2 : 'darkButton 2s ease-in-out infinite',
 				darkButton : 'darkToLightAnimmation 0.5s ease-in-out forwards',
 				lightButton : 'ligthToDarkAnimmation 0.5s ease-in-out forwards',
+				scrollHorizontal :  'scrollHorizontal 7s linear infinite'
 			}
 		},
 	},

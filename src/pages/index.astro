@@ -29,7 +29,7 @@ const typedData: CardProps[] = DATA as CardProps[]
 <BasicsLayout title="La Piscine" >
 	<ScrollProgress client:load/>
 	<Header/>
-	<section class="w-full flex flex-col items-center justify-center my-32">
+	<section class="w-full flex flex-col items-center justify-center xl:my-32 mt-32 mb-4">
 		<div class="max-w-[1440px] flex-col flex justify-between items-center lg:flex-row lg:items-between gap-12 w-full">
 			<div class="w-full justify-center lg:justify-start flex ">
 				<h2 class="sm:text-left md:text-left lg:text-center text-[4.4rem] xl:text-[7rem] md:text-[5.5rem] lg:text-[5.6rem] text-left px-3 leading-none font-semibold sm:max-w-sm md:max-w-md lg:max-w-3xl xl:max-w-4xl max-w-sm text-wrap relative">Que le plus fort, <span class="italic">l'emporte!</span>
@@ -52,9 +52,15 @@ const typedData: CardProps[] = DATA as CardProps[]
 				</div>
 			</div>
 		</div>
-		<div class="w-full max-w-[1440px]">
-			<h2 class="text-left font-bold text-[225px] text-nowrap overflow-hidden">&lt;A&gt;Front les Tous ! Clash of dev</h2>
-		</div>
+			<div class="w-full max-w-[1440px] overflow-hidden flex ">
+				<h2 class="text-left font-bold text-[225px] text-nowrap whitespace-nospace animate-scrollHorizontal">&lt;A&gt;Front les Tous !  
+					<span class="px-20 relative"> 
+						<img src="/svg/snippet_badge.svg" alt="Icone d'une balise" class="absolute -left-8 top-24  right-80"/>
+						Clash of Dev
+						<img src="/svg/smiley_badge.svg" alt="Icone d'une balise" class="absolute top-24 -right-8"/>
+					</span> 
+				</h2>
+			</div>
 	</section>
 	<section class="w-full flex justify-center ">
 		<div class="max-w-[1440px] px-3 flex w-full flex-col">

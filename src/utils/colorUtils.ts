@@ -1,11 +1,4 @@
-export type Color =
-  | "pink"
-  | "orange"
-  | "blue"
-  | "purple"
-  | "green"
-  | "yellow"
-  | "black";
+export type Color = "pink" | "orange" | "blue" | "purple" | "green" | "yellow";
 
 export interface ColorPallet {
   color: Color;
