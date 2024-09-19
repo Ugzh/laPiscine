@@ -11,9 +11,6 @@ import buttonSvg from "/svg/button.svg?raw"
     darkContainer?.addEventListener('click',()=>{
         handleDarkMode()
     })
-
-    
-
 	const handleDarkMode = ()=>{
         const body = document?.querySelector('body')
         const svgButton = document.querySelector('#darkMode > button > svg > path')
@@ -24,10 +21,9 @@ import buttonSvg from "/svg/button.svg?raw"
             svgButton?.setAttribute('fill','#262625')
         }
         body?.classList.toggle('dark')
-        
         darkButton?.classList.toggle('animate-darkButton')
         darkButton?.classList.toggle('animate-lightButton')
-    }     
+    }
 </script>
 
 

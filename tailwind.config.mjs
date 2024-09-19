@@ -1,5 +1,5 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
-import { transform } from 'typescript'
+import plugin from 'tailwindcss'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -39,8 +39,10 @@ export default {
 				lightButton : 'ligthToDarkAnimmation 0.5s ease-in-out forwards',
 			}
 		},
-		
 	},
 	darkMode: 'selector',
-	plugins: [],
+	plugins: [
+	  ],
 }
+
+
