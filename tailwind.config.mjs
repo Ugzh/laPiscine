@@ -20,7 +20,7 @@ export default {
           			'100%': { transform: 'translateX(1.75rem)' },
 				},
 				scrollHorizontal:{
-					'0%': {  transform: 'translateX(20%)'
+					'0%': {  transform: 'translateX(40%)'
 					 },
           			'100%': {  transform: 'translateX(-110%)' },
 				}
