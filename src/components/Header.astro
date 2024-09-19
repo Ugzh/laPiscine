@@ -2,11 +2,22 @@
 import DarkMode from "./DarkMode.astro";
 import { ScrollTracker } from "./ScrollTracker";
 ---
+<script>
+  function updateScrollPercentage(){
+  
+  }
+  window.addEventListener('scroll',()=>{
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight
+    const scrollPercentage = Math.floor((scrollY/docHeight)*100)
+    return document.querySelector('#percentage').textContent =`${scrollPercentage}%`
+  })
+</script>
 
-<header class=" w-full flex justify-center sticky px-3">
+
+<header class=" w-full flex justify-center fixed px-3 top-0 bg-[#F3F3F1] text-[#262625] dark:bg-[#262625] dark:text-[#F3F3F1] z-10">
   <div class="flex justify-between max-w-[1440px] w-full items-center my-5 ">
     <h1 class="bg-[#262625] text-[#EBEDFF] font-bold text-xs inline-block px-3 py-1.5 rounded-full rotate-[8deg] dark:text-[#262625] dark:bg-[#EBEDFF] ">LA PISCINE</h1>
-  <ScrollTracker purcentage={7}/>
+    <span class="font-bold text-xs" id="percentage">0%</span>
   <DarkMode/>
   </div>
   
