@@ -1,0 +1,108 @@
+[
+  {
+    "title": "L’ARTISTE DE RENOM",
+    "imgUrl": "/img/painter.png",
+    "imgAlt": "Image d'un peintre",
+    "color": "purple",
+    "tag": [
+      {
+        "name": "@maislina_",
+        "href": "https://x.com/maislina_"
+      }
+    ],
+    "svgUrl": "/svg/pointer.svg",
+    "description": "<strong>Le design,</strong> c’est son terrain de jeu. Il maîtrise et retranscrit correctement chaque pixel de la maquette.",
+    "subDescription": "Virtuose des couleurs il ne se trompe jamais de code HEX, de spacing ou de border-radius ; <strong>Figma n’a aucun secret pour ce Dev de talent</strong> ."
+  },
+  {
+    "title": "LE BÂTISSEUR DE CODE",
+    "imgUrl": "/img/builder.png",
+    "imgAlt": "Image d'un bâtisseur",
+    "color": "pink",
+    "tag": [
+      {
+        "name": "@Chris",
+        "href": "https://x.com/LLCoolChris_"
+      }
+    ],
+    "svgUrl": "/svg/snippet.svg",
+    "description": "Ses lignes de code sont des fondations solides. C’est <strong>un maître du front</strong>, capable de structurer les systèmes les plus complexes sans se casser la tête.",
+    "subDescription": "<strong>Maitre de VSCode</strong>, il a surement fini le challenge en s’assurant d’avoir le code le plus clair et le plus propre des 36 participants."
+  },
+  {
+    "title": "LE MAITRE DE LA FLUIDITÉ",
+    "imgUrl": "/img/master.png",
+    "imgAlt": "Image d'un maitre de la fluidité",
+    "color": "green",
+    "tag": [
+      {
+        "name": "@Lina",
+        "href": "https://x.com/maislina_"
+      },
+      {
+        "name": "@Chris",
+        "href": "https://x.com/LLCoolChris_"
+      }
+    ],
+    "svgUrl": "/svg/stars.svg",
+    "description": "Aucun composant ne s’affiche sans une <strong>animation soignée</strong>. Ses transitions sont légères, dynamiques et fluides, captivant l'utilisateur à chaque interaction.",
+    "subDescription": "Ce dev a l’oeil et maitrise le <strong>motion</strong> mieux que n’importe qui."
+  },
+  {
+    "title": "LE CHERCHEUR DE BREAKPOINT",
+    "imgUrl": "/img/researcher.png",
+    "imgAlt": "Image d'un chercheur de breakpoint",
+    "color": "blue",
+    "tag": [
+      {
+        "name": "@Lina",
+        "href": "https://x.com/maislina_"
+      },
+      {
+        "name": "@Chris",
+        "href": "https://x.com/LLCoolChris_"
+      }
+    ],
+    "svgUrl": "/svg/flash.svg",
+    "description": "Quelle que soit la taille de l’écran, il garantit une expérience utilisateur sans faille. Chaque site <strong>s’adapte à tous les supports</strong>, du mobile au grand écran.",
+    "subDescription": "Il fait attention à <strong>chaque breakpoint</strong> attentivement, on ne pourra pas le reprendre à l’inspection!"
+  },
+  {
+    "title": "LE MAITRE DES SECRETS",
+    "imgUrl": "/img/witch.png",
+    "imgAlt": "Image d'un maitre des secrets",
+    "color": "yellow",
+    "tag": [
+      {
+        "name": "@Lina",
+        "href": "https://x.com/maislina_"
+      },
+      {
+        "name": "@Chris",
+        "href": "https://x.com/LLCoolChris_"
+      }
+    ],
+    "svgUrl": "/svg/switch.svg",
+    "description": "Derrière une ligne de code bien choisie se cache un <strong>secret bien gardé</strong>. Il glisse la surprise qui surprendra les utilisateurs les plus curieux.",
+    "subDescription": "Dev attentif aux comportements utilisateurs il saura cacher l’<strong>Easter Egg</strong> au meilleur endroit."
+  },
+  {
+    "title": "LE MAITRE DES SECRETS",
+    "imgUrl": "/img/hero.png",
+    "imgAlt": "Image d'un maitre des secrets",
+    "color": "orange",
+    "tag": [
+      {
+        "name": "@Lina",
+        "href": "https://x.com/maislina_"
+      },
+      {
+        "name": "@Chris",
+        "href": "https://x.com/LLCoolChris_"
+      }
+    ],
+    "svgUrl": "/svg/smiley.svg",
+    "description": "Il excelle dans tous les domaines, alliant design, propreté de code, réactivité, animations fluides et créativité cachée.<strong> Un vrai prodige </strong> qui a su briller dans chaque aspect du développement.",
+    "subDescription": "Ce dev aux <stromg>multitalents</strong> a reçu la standing ovation du jury."
+  }
+]

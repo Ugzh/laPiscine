@@ -2,12 +2,29 @@
 import Header from "../components/Header.astro"
 import BasicsLayout from "../layouts/BasicsLayout.astro"
 import ScrollProgress from "../components/ScrollProgress"
+import FormatDescription from "../components/FormatDescription"
 import CardLayout from "../layouts/CardLayout.astro"
 import CursorTag from "../components/CursorTag"
-import pointerSvg from "../../public/svg/pointer.svg?raw"
-import snippetSvg from "../../public/svg/snippet.svg?raw"
-import DarkMode from "../components/DarkMode.astro"
+import DATA from '../../data.json'
+import type { Color } from "../utils/colorUtils"
 
+interface TagProps {
+	name:string,
+	href:string	
+}
+
+interface CardProps {
+	title:string, 
+	imgUrl:string, 
+	imgAlt:string, 
+	color: Color, 
+	tag: TagProps[], 
+	svgUrl:string,
+	description:string,
+	subDescription:string,
+}
+
+const typedData: CardProps[] = DATA as CardProps[]
 
 ---
 
@@ -19,28 +36,6 @@ import DarkMode from "../components/DarkMode.astro"
 			max-width: 100%;
 		}
 	}
-
-	.svg_tracker svg {
-		position: absolute;
-		bottom: -100px;
-		right: -80px;
-		
-	}
-	@media screen and (max-width:1024px) {
-			.svg_tracker svg {
-				width: 200px;
-				bottom: -160px;
-				right: -40px;
-			}
-		}
-
-	@media screen and (max-width:1280px) and (min-width:1024px){
-			.svg_tracker svg {
-				bottom: -150px;
-				right: -50px;
-				width: 300px;
-			}
-		}
 </style>
 
 <BasicsLayout title="La Piscine" >
@@ -75,27 +70,14 @@ import DarkMode from "../components/DarkMode.astro"
 	</section>
 	<section class="w-full flex justify-center ">
 		<div class="max-w-[1440px] px-3 flex w-full flex-col">
-			<CardLayout color="purple" title="l'artiste de renom" imgUrl="/img/painter.png" imgAlt="Imagé en pixel d'un peintre">
-				<CursorTag color="purple" href="/" tag="@chris" slot="tag"/>
-				<CursorTag color="purple" href="/" tag="@lina" slot="tag"/>
-				<Fragment slot="description">
-					<p><strong>Le design</strong>, c’est son terrain de jeu.Il maîtrise et retranscrit correctement chaque pixel de la maquette.</p>
-					<p>Virtuose des couleurs il ne se trompe jamais de code HEX, de spacing ou de border-radius ; <strong >Figma n’a aucun secret pour ce Dev de talent.</strong></p>
-				</Fragment>
-				<Fragment set:html={pointerSvg} slot="svg" />
+			{typedData.map(({title, imgUrl, imgAlt, color, tag, svgUrl, description, subDescription} )=> {
+				return <CardLayout color={color} title={title} imgUrl={imgUrl} imgAlt={imgAlt}>
+				{tag.map(({name,href}: TagProps)=> <CursorTag slot="tag" href={href} tag={name} color={color}/> )}
+				<p slot="description" set:html={description}></p>
+				<p slot="description" set:html={subDescription}></p>
+				<img src={svgUrl} alt={`Icone du ${title}`} slot="svg" class="absolute -bottom-10 -right-8 w-40"/> 
 			</CardLayout>
-			<!-- <CardLayout color="pink" title="le bâtisseur de code" imgUrl="/img/builder.png" imgAlt="Imagé en pixel d'un peintre">
-				<CursorTag color="pink" href="/" tag="@maislina_" slot="tag"/>
-				<CursorTag color="pink" href="/x.com/zied" tag="zied" slot="tag"/>
-				<Fragment slot="description">
-					<p>Ses lignes de code sont des fondations solides. C’est un maître du front, capable de structurer les systèmes les plus complexes sans se casser la tête.</p>
-					<p>Maitre de VSCode, il a surement fini le challenge en s’assurant d’avoir le code le plus clair et le plus propre des 36 participants.</p>
-				</Fragment>
-				<Fragment set:html={snippetSvg} slot="svg" />
-			</CardLayout>
-	 -->
+			})}
 		</div>
 	</section>
-
-
 </BasicsLayout>
