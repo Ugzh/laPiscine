@@ -28,7 +28,7 @@ export default {
 			animation:{
 				darkButton : 'darkToLightAnimmation 0.5s ease-in-out forwards',
 				lightButton : 'ligthToDarkAnimmation 0.5s ease-in-out forwards',
-				scrollHorizontal :  'scrollHorizontal 7s linear infinite'
+				scrollHorizontal :  'scrollHorizontal 12s linear infinite'
 			}
 		},
 	},
