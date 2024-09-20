@@ -1,7 +1,7 @@
 [
   {
     "title": "L’ARTISTE DE RENOM",
-    "imgUrl": "/img/painter.png",
+    "imgUrl": "/img/painter.webp",
     "imgAlt": "Image d'un peintre",
     "color": "purple",
     "tag": [
@@ -16,7 +16,7 @@
   },
   {
     "title": "LE BÂTISSEUR DE CODE",
-    "imgUrl": "/img/builder.png",
+    "imgUrl": "/img/builder.webp",
     "imgAlt": "Image d'un bâtisseur",
     "color": "pink",
     "tag": [
@@ -31,7 +31,7 @@
   },
   {
     "title": "LE MAITRE DE LA FLUIDITÉ",
-    "imgUrl": "/img/master.png",
+    "imgUrl": "/img/master.webp",
     "imgAlt": "Image d'un maitre de la fluidité",
     "color": "green",
     "tag": [
@@ -50,7 +50,7 @@
   },
   {
     "title": "LE CHERCHEUR DE BREAKPOINT",
-    "imgUrl": "/img/researcher.png",
+    "imgUrl": "/img/researcher.webp",
     "imgAlt": "Image d'un chercheur de breakpoint",
     "color": "blue",
     "tag": [
@@ -69,7 +69,7 @@
   },
   {
     "title": "LE MAITRE DES SECRETS",
-    "imgUrl": "/img/witch.png",
+    "imgUrl": "/img/witch.webp",
     "imgAlt": "Image d'un maitre des secrets",
     "color": "yellow",
     "tag": [
@@ -88,7 +88,7 @@
   },
   {
     "title": "LE MAITRE DES SECRETS",
-    "imgUrl": "/img/hero.png",
+    "imgUrl": "/img/hero.webp",
     "imgAlt": "Image d'un maitre des secrets",
     "color": "orange",
     "tag": [
