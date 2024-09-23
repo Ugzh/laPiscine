@@ -5,7 +5,11 @@ import DarkMode from "./DarkMode.astro";
    window.addEventListener('scroll',()=>{
     const docHeight = document.documentElement.scrollHeight - window.innerHeight
     const scrollPercentage = Math.floor((scrollY/docHeight)*100)
-    return document.querySelector('#percentage')!.textContent =`${scrollPercentage}%`
+    if(scrollPercentage === 100){
+      document.querySelector('#percentage')!.textContent =``
+    } else {
+      return document.querySelector('#percentage')!.textContent =`${scrollPercentage}%`
+    }
   })
 </script>
 
